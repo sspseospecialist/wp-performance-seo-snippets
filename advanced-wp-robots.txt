@@ -1,0 +1,78 @@
+# SSPSEO - Advanced WordPress robots.txt
+# Focus: Crawl Budget Optimization, Server Security & AI Bot Allowlisting.
+
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/cache/
+Disallow: /wp-content/themes/
+Disallow: /wp-content/upgrade/
+Disallow: /trackback/
+Disallow: /comments/
+Disallow: /login*
+Disallow: /wp-login.php
+Disallow: /wp-login.php*
+
+# Disabilita feed (Salvataggio Crawl Budget)
+Disallow: /feed/
+Disallow: /comments/feed/
+Disallow: /category/*/feed/
+Disallow: /tag/*/feed/
+Disallow: /author/*/feed/
+
+# Bloccare parametri duplicati e query string dinamiche
+Disallow: /?*
+Disallow: /?s=*
+Disallow: /search/*
+
+# Sitemap
+Sitemap: https://sspseo.it/sitemap_index.xml
+
+# CONSENTIRE AI BOT (Inclusione per SGE e AI Search Engines)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# BLOCCARE bot malevoli, scraper e scanner di vulnerabilità
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: Barkrowler
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Go-http-client
+Disallow: /
+
+User-agent: python-requests
+Disallow: /
+
+User-agent: libwww-perl
+Disallow: /
+
+User-agent: Riddler
+Disallow: /
+
+User-agent: Nuclei
+Disallow: /
